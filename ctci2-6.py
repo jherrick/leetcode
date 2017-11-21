@@ -5,8 +5,7 @@ implement a fx to check if a linked list is a palindrome
 
 --- 
 methodology:
-assuming the list is not doubly linked and we only have access to the head, we'll need to iterate over it at 
-least twice. In that circumstance, the problem is essentially identical identifying if an array is a palindrome
+assuming the list is not doubly linked and we only have access to the head, we'll need to iterate over the elements at least twice. In that circumstance, the problem is essentially identical identifying if an array is a palindrome
 '''
 
 def linkedListPalindrome(head):
