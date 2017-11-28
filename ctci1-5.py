@@ -23,11 +23,42 @@ O(1) space complexity, O(n) time complexity
 '''
 
 def oneAway(string1, string2):
+	#check corner case of length differeing by > 1
 	if |len(string1)-len(string2)| > 1:
 		return False
 
-	p1 = 0
-	p2 = 0
-	diffs = 0
+	#find longer string
+	if len(string1) > len(string2):
+		s1 = string1
+		s2 = string2
+	else:
+		s2 = string1
+		s1 = string2
+
+	#create pointers and flag
+	iter1 = 0
+	iter2 = 0
+	foundDifference = False
+
+	while iter2 < len(s2) and iter1 < len(s1):
+		
+		if s1[iter1] != s2[iter2]:
+			if not foundDifference:
+				return False
+			foundDifference = True
+
+		if len(s1) == len(s2):
+			iter1 += 1
+
+		else:
+			iter1 += 1
+
+		iter2 += 1
+
+	return True 
+
+
+	
+
 
 	
